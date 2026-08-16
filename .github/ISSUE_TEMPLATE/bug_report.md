@@ -5,18 +5,40 @@ title: ""
 labels: bug
 ---
 
-**Steps to reproduce**
+> Please do not include prompts, conversation content, personal data, API keys,
+> access tokens, or other private information. Use the private security/contact
+> channel for security or privacy issues.
 
+## What happened?
 
-**Expected behavior**
+## Steps to reproduce
 
+1.
+2.
+3.
 
-**Actual behavior**
+## Expected result
 
+## Actual result
 
-**Environment**
-- OS:
+## Frequency
+- [ ] Every time
+- [ ] Sometimes
+- [ ] Happened once
+
+## Severity
+- [ ] Blocking
+- [ ] Major
+- [ ] Minor
+
+## Environment
+- Inkfold environment: production / staging / local
+- App version:
+- Route:
+- OS/platform:
 - Browser/version:
 
-**Screenshots or logs**
+## Screenshots or logs
+
+<!-- Check screenshots for private information before attaching them. -->
 

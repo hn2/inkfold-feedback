@@ -1,14 +1,23 @@
 # Inkfold — Alpha Feedback
 
-This repo is for bug reports and feedback during the Inkfold alpha. It contains no source code — it's an issue tracker only.
+This repository is for bug reports and product feedback during the Inkfold
+alpha. It contains no source code — it is an issue tracker only.
 
 Product: https://app.inkfold.app
 
 ## Reporting a bug
 
-Open a new issue and use the "Bug report" template. Please include:
+Use the in-app **Report a bug** action whenever possible. It opens a pre-filled
+issue with safe route and environment details. You can also open a new issue
+here and choose the appropriate template.
+
+Please include:
 
 1. Steps to reproduce
 2. Expected vs. actual behavior
 3. Environment (OS, browser/version if relevant)
-4. Screenshots or logs if you have them
+4. Screenshots or logs if you have them, after checking that they contain no private information
+
+Do not post prompts, conversation content, personal data, API keys, access
+tokens, or security/privacy reports publicly. See [SECURITY.md](SECURITY.md) for
+the private-reporting rule.
