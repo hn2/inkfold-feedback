@@ -3,7 +3,13 @@
 This repository is for bug reports and product feedback during the Inkfold
 alpha. It contains no source code — it is an issue tracker only.
 
-Product: https://app.inkfold.app
+## Inkfold environments
+
+- Production: https://app.inkfold.app
+- Tester environment: https://test.inkfold.app (planned)
+
+Use the tester environment for assigned staging work once access is provided.
+It will use separate data from production.
 
 ## Reporting a bug
 
