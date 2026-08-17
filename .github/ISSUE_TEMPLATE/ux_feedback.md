@@ -12,7 +12,7 @@ labels: ux
 ## What would make this clearer?
 
 ## Environment
-- Inkfold environment: production / staging / local
+- Inkfold environment: production (`app.inkfold.app`) / tester (`test.inkfold.app`) / local
 - Route:
 - OS/platform:
 - Browser/version:

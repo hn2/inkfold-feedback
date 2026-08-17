@@ -32,7 +32,7 @@ labels: bug
 - [ ] Minor
 
 ## Environment
-- Inkfold environment: production / staging / local
+- Inkfold environment: production (`app.inkfold.app`) / tester (`test.inkfold.app`) / local
 - App version:
 - Route:
 - OS/platform:
