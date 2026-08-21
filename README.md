@@ -20,9 +20,16 @@ It will use separate data from production.
 
 ## Reporting a bug
 
-Use the in-app **Report a bug** action whenever possible. It opens a pre-filled
-issue with safe route and environment details. You can also open a new issue
-here and choose the appropriate template.
+The quickest way to report a bug is directly inside Inkfold:
+
+1. Open the **Ask Inkfold** chat window in the lower-right corner.
+2. Click **Report a bug** in the chat window header.
+3. Complete the pre-filled GitHub issue and add your reproduction details.
+
+![Where to report a bug in Inkfold](screenshots/inkfold-tester-report-a-bug-closeup.png)
+
+The link opens a pre-filled issue with safe route and environment details. You
+can also open a new issue here and choose the appropriate template.
 
 Please include:
 
