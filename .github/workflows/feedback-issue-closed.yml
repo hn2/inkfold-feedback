@@ -1,0 +1,36 @@
+name: Notify Inkfold when tester feedback is resolved
+
+on:
+  issues:
+    types: [closed]
+
+permissions:
+  contents: read
+
+jobs:
+  notify-inkfold:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send signed close event
+        env:
+          WEBHOOK_URL: ${{ secrets.INKFOLD_FEEDBACK_WEBHOOK_URL }}
+          WEBHOOK_SECRET: ${{ secrets.INKFOLD_FEEDBACK_WEBHOOK_SECRET }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          REPOSITORY: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          test -n "$WEBHOOK_URL"
+          test -n "$WEBHOOK_SECRET"
+          payload="$(jq -cn \
+            --arg action "closed" \
+            --arg repository "$REPOSITORY" \
+            --argjson number "$ISSUE_NUMBER" \
+            '{action:$action,repository:{full_name:$repository},issue:{number:$number,state:"closed"}}')"
+          signature="sha256=$(printf '%s' "$payload" | openssl dgst -sha256 -hmac "$WEBHOOK_SECRET" -hex | sed 's/^.* //')"
+          curl --fail-with-body --retry 3 --retry-all-errors \
+            --connect-timeout 10 --max-time 30 \
+            -X POST "$WEBHOOK_URL" \
+            -H 'Content-Type: application/json' \
+            -H 'X-GitHub-Event: issues' \
+            -H "X-Hub-Signature-256: $signature" \
+            --data "$payload"
