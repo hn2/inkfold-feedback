@@ -37,6 +37,23 @@ across models instead.
 - **Flexible model access.** Bring your own API key (BYOK), use Inkfold's
   managed access under a quota, or pay as you go — these can be mixed.
 
+## What powers Inkfold
+
+Inkfold is built on **FusionLayer** — a shared memory and multi-model
+evaluation engine. FusionLayer is what actually remembers your context and
+carries it across models, and what runs a prompt against several models at
+once when you use Compare or Synthesis. The three privacy modes described
+above are enforced by the engine, not bolted on by the app.
+
+The split matters if you hit something odd while testing: a bug in *what
+Inkfold looks like or how it behaves* is an Inkfold issue, while a bug in
+*what gets remembered, what a model was given, or how answers get combined*
+usually lives in the engine. You do not need to work out which is which —
+report what you saw and we will route it — but it explains why some fixes
+land quickly and others take a release.
+
+More about the engine: https://fusionlayer.app
+
 ## Feature tour
 
 Everything below is live in the alpha and fair game to test. Rough nav

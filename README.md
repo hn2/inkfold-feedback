@@ -3,6 +3,10 @@
 This repository is for bug reports and product feedback during the Inkfold
 alpha. It contains no source code — it is an issue tracker only.
 
+Inkfold is built on the **FusionLayer** engine (https://fusionlayer.app),
+which provides the cross-model memory, the privacy modes, and the
+multi-model comparison behind the app.
+
 ## Inkfold environments
 
 - Production: https://app.inkfold.app
